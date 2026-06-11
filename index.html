@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
+    <title>404 - Lapa nav atrasta</title>
     <style>
         :root {
-            --bg-color: #0a0a16;
-            --text-color: #ffffff;
-            --accent-color: #7000ff;
-            --glow-color: #ff007f;
-            --muted-color: #8a8a9e;
+            --bg-color: #05020a;       /* Dziļi melns ar violetu apakštoni */
+            --text-color: #ffffff;     /* Balts teksts */
+            --accent-purple: #8a2be2;  /* Spilgti violets */
+            --dark-purple: #3d0066;    /* Tumši violets mirdzums */
+            --muted-color: #a39cb0;    /* Pelēcīgi violets tekstam */
         }
 
         * {
@@ -37,12 +37,12 @@
             padding: 20px;
         }
 
-        /* Ambient background glows */
+        /* Fona mirdzuma efekts */
         .glow-sphere {
             position: absolute;
-            background: radial-gradient(circle, rgba(112, 0, 255, 0.15) 0%, rgba(0,0,0,0) 70%);
-            width: 600px;
-            height: 600px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(5, 2, 10, 0) 70%);
+            width: 700px;
+            height: 700px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -51,20 +51,21 @@
         }
 
         .error-code {
-            font-size: clamp(8rem, 20vw, 14rem);
+            font-size: clamp(8rem, 22vw, 15rem);
             font-weight: 900;
             line-height: 1;
-            background: linear-gradient(135deg, var(--text-color) 30%, var(--accent-color), var(--glow-color));
+            background: linear-gradient(135deg, #ffffff 20%, var(--accent-purple), var(--dark-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -5px;
-            animation: float 6s ease-in-out infinite;
+            letter-spacing: -4px;
+            animation: float 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.3));
         }
 
         h1 {
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-top: 20px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
 
@@ -73,39 +74,41 @@
             font-size: clamp(1rem, 2vw, 1.15rem);
             margin-top: 12px;
             margin-bottom: 40px;
-            max-width: 450px;
+            max-width: 480px;
             line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 32px;
+            padding: 14px 36px;
             font-size: 1rem;
             font-weight: 600;
             color: var(--text-color);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(138, 43, 226, 0.15);
+            border: 1px solid rgba(138, 43, 226, 0.4);
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .btn:hover {
-            background: var(--text-color);
-            color: var(--bg-color);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            background: var(--accent-purple);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+            transform: translateY(-3px);
         }
 
-        /* Floating Animation */
+        /* Lēnā peldēšanas animācija */
         @keyframes float {
             0%, 100% {
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-15px);
+                transform: translateY(-12px);
             }
         }
     </style>
@@ -116,9 +119,9 @@
 
     <div class="container">
         <div class="error-code">404</div>
-        <h1>Lost in the deep end?</h1>
-        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <a href="#" class="btn">Take Me Home</a>
+        <h1>Lapa netika atrasta</h1>
+        <p>Izskatās, ka meklētā lapa vairs neeksistē, ir pārvietota vai arī ievadītā saite ir neprecīza.</p>
+        <a href="/" class="btn">Atgriezties sākumā</a>
     </div>
 
 </body>
